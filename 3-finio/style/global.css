@@ -1,0 +1,23 @@
+:root {
+  --max-width: 1392px;
+
+  --white: rgb(255, 255, 255);
+  --blue: rgb(53, 126, 254);
+  --black: rgb(0, 0, 0);
+  --green: rgb(26, 188, 156);
+  --orange: rgb(255, 199, 54);
+  --color-text: rgb(78, 93, 124);
+  --color-text5: rgba(78, 93, 124, 0.5);
+  --color-text8: rgba(255, 255, 255, 0.8);
+  --footer-text5: rgba(255, 255, 255, 0.5);
+  --footer-text7: rgba(255, 255, 255, 0.7);
+
+  --border: 34px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
