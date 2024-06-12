@@ -1,0 +1,103 @@
+.footer {
+  padding-top: 80px;
+  background-color: rgb(26, 29, 37);
+}
+
+.footer-wrapper {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 124px;
+}
+
+.footer-logo {
+  width: 283px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.footer-logo-a {
+  color: var(--white);
+  font-size: 36px;
+  font-weight: 900;
+  line-height: 140%;
+  text-transform: uppercase;
+}
+
+.footer-logo-text {
+  color: var(--footer-text7);
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 140%;
+}
+
+.footer-a {
+  display: flex;
+  justify-content: space-between;
+  gap: 151px;
+}
+
+.footer-a-list {
+  height: 120px;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.footer-a-list_item a {
+  color: var(--footer-text5);
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 140%;
+  text-decoration: none;
+}
+
+.footer-info {
+  width: 262px;
+  height: 184px;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-info-item li {
+  color: var(--footer-text7);
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 140%;
+  list-style: none;
+}
+
+.footer-info-mail {
+  color: var(--footer-text5);
+}
+
+.footer-hr {
+  height: 1px;
+  border: none;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.footer-pay {
+  padding: 32px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer-pay-copyright {
+  color: var(--footer-text7);
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 140%;
+}
+
+.footer-pay-cardimg {
+  display: flex;
+  gap: 24px;
+}
