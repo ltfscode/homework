@@ -1,19 +1,53 @@
-const Luhn = (card) => {
-  let checksum = 0;
-  const cardnumbers = card
+// const Luhn = (card) => {
+//   let checksum = 0;
+//   const cardnumbers = card
+//     .split("")
+//     .map(Number);
+
+//   for (const [index, num] of cardnumbers.entries()) {
+//     if (index % 2 === 0) {
+//       let buffer = num * 2;
+//       buffer > 9 ? (checksum += buffer - 9) : (checksum += buffer);
+//     } else {
+//       checksum += num;
+//     }
+//   }
+//   return checksum % 10 === 0 ? true : false;
+// };
+
+// console.log(Luhn("4561-2612-1234-5467"));
+// console.log(Luhn("5062821234567892"));
+
+
+
+function cardLunaValidate(card) {
+  const cardNumber = card
+    .replaceAll("-", "")
     .split("")
-    .map(Number);
-
-  for (const [index, num] of cardnumbers.entries()) {
-    if (index % 2 === 0) {
-      let buffer = num * 2;
-      buffer > 9 ? (checksum += buffer - 9) : (checksum += buffer);
-    } else {
-      checksum += num;
-    }
+    .map((x) => Number(x));
+  if (cardNumber.includes(NaN)) {
+    return NaN;
   }
-  return checksum % 10 === 0 ? true : false;
-};
+  const isEven = (cardNumber.length - 1) % 2 === 0;
 
-console.log(Luhn("4561-2612-1234-5467"));
-console.log(Luhn("5062821234567892"));
+  for (let i = Number(isEven); i < cardNumber.length; i = i + 2) {
+    cardNumber[i] =
+      cardNumber[i] * 2 > 9 ? cardNumber[i] * 2 - 9 : cardNumber[i] * 2;
+  }
+  const sum = cardNumber.reduce((total, el) => total + el);
+  return sum % 10 === 0;
+}
+const card = "234s834503458353";
+const card1 = "2342834503458353";
+const card2 = "4561-2612-1234-5464";
+const card3 = "4561-2612-1534-5464";
+
+function resultTemplate(card) {
+  const startString = `Карта с номером: ${card}`;
+  const endString = `получила результат: ${cardLunaValidate(card)}`;
+  return `${startString} ${endString}`;
+}
+console.log(resultTemplate(card));
+console.log(resultTemplate(card1));
+console.log(resultTemplate(card2));
+console.log(resultTemplate(card3));  
